@@ -1,39 +1,83 @@
 :root {
 
     --header-color: #5c5c77;
+    --bg-primary: #ffbc3b;
+    --bg-secondary: #1a1a37;
 
 }
 
-header {
+header#top-header {
     padding-top: .5rem;
     padding-bottom: .5rem;
 }
 
-header a {
+header#top-header a {
     color: var(--header-color);
     font-weight: 800;
     font-size: .75rem;
 }
 
-header a:hover {
-    color: orange;
+header#top-header a:hover {
+    color: var(--bg-primary);
     text-decoration: none;
 }
 
-header .socials {
+header#top-header .socials {
     display: inline-block;
     margin-left: .5rem;
 
 }
 
-header .socials a{
+header#top-header .socials a {
     margin-left: .3rem;
     margin-right: .3rem;
 
 }
 
-header .navigation li {
+header#top-header .navigation li {
     text-transform: uppercase;
-    margin-left:.5rem;
-    margin-right:.5rem;
+    margin-left: .5rem;
+    margin-right: .5rem;
+}
+
+#carousel {
+    position: relative;
+    background: url('images/banner-1.jpg') no-repeat center center;
+    background-size: cover;
+    height: 500px;
+}
+
+#carousel:before {
+    background: #1a1a37;
+    opacity: .8;
+    content: " ";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+}
+
+#carousel header {
+    position: relative;
+    background: linear-gradient(to right, transparent 50%, var(--bg-primary) 50%);
+}
+
+@media(max-width:992px) {
+    #carousel header {
+        background: linear-gradient(to right, #1a1a37 70%, var(--bg-primary) 50%);
+    }
+}
+
+#carousel #navbarSupportedContent ul {
+    background: var(--bg-primary);
+    padding: 1.1rem;
+}
+
+
+#carousel #navbarSupportedContent a {
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: white;
+    margin-left: .75rem;
+    margin-right: .75rem;
 }
