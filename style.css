@@ -4,6 +4,7 @@
     --header-color: #5c5c77;
     --bg-primary: #ffbc3b;
     --bg-secondary: #1a1a37;
+    --bg-grey: #f8f8f8;
 
 }
 
@@ -150,4 +151,29 @@ header#top-header .navigation li {
 
 #carousel .arrows a:hover {
     color: var(--bg-primary);
+}
+
+
+#features {
+    background-color:var(--bg-grey);
+}
+
+#features .objectives {
+    position: relative;
+    top: -100px;
+    padding:5rem;
+    background-color:var(--bg-grey);
+}
+#features .objectives .col-md-6 {
+    padding:1.5rem;
+}
+
+#features .objectives i {
+    color: var(--bg-primary);
+}
+
+#features .objectives h1 {
+    margin-top: 1rem;
+    font-size: 2rem;
+    font-weight: 600
 }
