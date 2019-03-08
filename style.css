@@ -409,18 +409,20 @@ header#top-header .navigation li {
 }
 
 #events .my-card:hover {
-    box-shadow: 0px 4px 25px 0px rgba(27, 39, 71, 0.15)
+    box-shadow: 0px 4px 25px 0px rgba(27, 39, 71, 0.15);
 }
 
 
 #events .img-body {
     position: relative;
     cursor: pointer;
-    overflow:hidden;
+    overflow: hidden;
 }
-#events .img-body img{
-    transition:all .5s ease-in-out;
+
+#events .img-body img {
+    transition: all .5s ease-in-out;
 }
+
 #events .img-body:hover img {
     transform: scale(1.2);
 }
@@ -462,4 +464,34 @@ header#top-header .navigation li {
 
 #events .card-body .headline:hover {
     color: var(--bg-primary);
+}
+
+#instructors .headline{
+    padding:.5rem;
+    text-transform: capitalize;
+}
+#instructors .instructor-card {
+    border: 1px solid #ededf1;
+    height: 520px;
+}
+
+#instructors .instructor-card:hover {
+    box-shadow: 0px 5px 25px rgba(27, 39, 71, 0.15);
+}
+
+#instructors .card-body .instructor-name {
+    font-size: 1.5rem;
+}
+#instructors .card-body .instructor-role{
+    font-weight:400;
+}
+#instructors .card-body a{
+    margin-left:.4rem;
+    margin-right:.4rem;
+    color:var(--bg-secondary);
+}
+#instructors .card-body a:hover i{
+    transition: ease-in-out all 1.5s;
+    color:var(--bg-primary);
+    transform: rotate(360deg);
 }
