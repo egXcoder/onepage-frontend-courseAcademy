@@ -472,7 +472,7 @@ header#top-header .navigation li {
 }
 #instructors .instructor-card {
     border: 1px solid #ededf1;
-    height: 520px;
+    height: 530px;
 }
 
 #instructors .instructor-card:hover {
@@ -494,4 +494,26 @@ header#top-header .navigation li {
     transition: ease-in-out all 1.5s;
     color:var(--bg-primary);
     transform: rotate(360deg);
+}
+#news .headline{
+    margin-bottom:1.5rem;
+}
+#news .news-card{
+    border:1px solid #ededf1;
+    height:480px;
+}
+#news .news-card:hover{
+box-shadow: 0px 5px 25px rgba(27, 39, 71, 0.15);
+}
+#news .news-body{
+    padding:1.1rem;
+}
+#news .news-body h1{
+    font-size:1.5rem;
+    font-weight:700;
+}
+#news .news-body button{
+    background:var(--bg-primary);
+    color:white;
+    padding:.2rem 1rem .2rem 1rem;
 }
