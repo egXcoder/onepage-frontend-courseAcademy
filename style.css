@@ -1,11 +1,41 @@
 :root {
 
     --font: EXO, sans-serif;
-    --header-color: #5c5c77;
+    --font-color: #5c5c77;
     --bg-primary: #ffbc3b;
     --bg-secondary: #1a1a37;
     --bg-grey: #f8f8f8;
 
+}
+
+.btn-hollow {
+    position: relative;
+    border-color: var(--bg-primary);
+    border-width: 1px;
+    color: var(--bg-primary);
+    z-index: 1;
+
+}
+
+.btn-hollow::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 80%;
+    left: 0%;
+    bottom: 10%;
+    z-index: -1;
+    background: white;
+}
+
+.btn-hollow:hover {
+    background: var(--bg-primary);
+    color: var(--bg-primary);
+}
+
+.btn-hollow:hover::before {
+    transform: rotate(2deg);
+    transition: ease-in .2s;
 }
 
 header#top-header {
@@ -14,7 +44,7 @@ header#top-header {
 }
 
 header#top-header a {
-    color: var(--header-color);
+    color: var(--font-color);
     font-weight: 800;
     font-size: .75rem;
 }
@@ -179,6 +209,9 @@ header#top-header .navigation li {
     font-weight: 600
 }
 
+#about {
+    margin-bottom: 5rem;
+}
 
 #about .row {
     padding-top: 5rem;
@@ -198,35 +231,235 @@ header#top-header .navigation li {
     line-height: 1.9;
 }
 
-
-#about .btn-hollow {
-    position: relative;
-    border-color: var(--bg-primary);
-    border-width: 1px;
-    font-size: 1.2rem;
+#about .btn-learn {
     padding: .5rem 2rem .5rem 2rem;
-    color: var(--bg-primary);
     font-weight: 500;
-    z-index: 1;
+    font-size: 1.2rem;
 }
 
-#about .btn-hollow::before {
-    position: absolute;
-    content: "";
-    width: 100%;
-    height: 80%;
-    left: 0%;
-    bottom: 10%;
-    z-index:-1;
-    background:white;
+#courses header p {
+    font-weight: 800;
+    font-size: 2.5rem;
+    text-transform: capitalize;
+    color: var(--bg-secondary);
+    font-family: var(--font);
+    margin-bottom: 0;
+
 }
 
-#about .btn-hollow:hover {
-    background: var(--bg-primary);
+#courses header .btn-see {
+    padding: .3rem 2rem .3rem 2rem;
+
+}
+
+
+#courses .my-card {
+    border: 1px solid #ededf1;
+    padding: 0;
+    height: 550px;
+    margin-bottom: 3rem;
+}
+
+#courses .my-card:hover {
+    box-shadow: 0px 4px 25px 0px rgba(27, 39, 71, 0.15)
+}
+
+#courses .card-body {
+    padding: 1rem;
+}
+
+#courses .card-body a {
+    color: var(--bg-secondary);
+    text-decoration: none;
+}
+
+#courses .card-body a:hover {
     color: var(--bg-primary);
 }
 
-#about .btn-hollow:hover::before {
-    transform: rotate(2deg);
-    transition: ease-in .2s;
+#courses .card-body .headline {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--bg-secondary);
+    cursor: pointer;
+}
+
+#courses .card-body p {
+    color: var(--bg-secondary);
+}
+
+#courses .card-body button {
+    background: var(--bg-primary);
+    color: white;
+}
+
+.bg {
+    background: var(--bg-primary);
+}
+
+#training .box {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+#training .small-text {
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 0;
+}
+
+#training .big-text {
+    color: white;
+    font-size: 3rem;
+    font-weight: 800;
+}
+
+#training .btn-hollow {
+    background: var(--bg-primary);
+}
+
+#stories {
+    background: url('images/success-story.jpg') no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+@media(max-width:768px) {
+    #stories .btn-play {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #stories .story-card {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+#stories .btn-play {
+    position: relative;
+    z-index: 1;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-top: auto;
+    margin-bottom: auto;
+    background: var(--bg-primary);
+    color: white;
+}
+
+#stories .btn-play::before {
+    content: "";
+    position: absolute;
+    color: var(--bg-primary);
+    z-index: -1;
+    top: 10%;
+    left: 10%;
+    width: 80%;
+    border-radius: 80%;
+    height: 80%;
+}
+
+#stories .btn-play:hover {
+    color: var(--bg-primary);
+    background: var(--bg-primary);
+}
+
+#stories .btn-play:hover:before {
+    color: var(--bg-primary);
+    background: white;
+    transition: easeease-in-out .3s;
+}
+
+#events {
+    background: var(--bg-grey);
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+#stories .story-card {
+    background: white;
+    width: 500px;
+    color: var(--font-color);
+}
+
+
+#events header p {
+    font-weight: 800;
+    font-size: 2.5rem;
+    text-transform: capitalize;
+    color: var(--bg-secondary);
+    font-family: var(--font);
+    margin-bottom: 0;
+    margin-left: .5rem;
+
+}
+
+#events header .btn-see {
+    padding: .3rem 2rem .3rem 2rem;
+
+}
+
+#events .my-card {
+    border: 1px solid #ededf1;
+    padding: 0;
+    height: 450px;
+    margin-bottom: 3rem;
+}
+
+#events .my-card:hover {
+    box-shadow: 0px 4px 25px 0px rgba(27, 39, 71, 0.15)
+}
+
+
+#events .img-body {
+    position: relative;
+    cursor: pointer;
+    overflow:hidden;
+}
+#events .img-body img{
+    transition:all .5s ease-in-out;
+}
+#events .img-body:hover img {
+    transform: scale(1.2);
+}
+
+
+#events .date-box {
+    background: var(--bg-primary);
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+    color: white;
+    padding: .5rem;
+}
+
+#events .date-box .date-day {
+    font-weight: 800;
+    font-size: 2.5rem;
+    margin-bottom: 0;
+}
+
+#events .date-box .date-month {
+    font-weight: 800;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+
+#events .card-body i {
+    color: var(--bg-primary);
+    font-size: 1.3rem;
+    margin-right: .5rem;
+}
+
+#events .card-body .headline {
+    text-transform: capitalize;
+    font-weight: 800;
+    font-size: 1.5rem;
+}
+
+#events .card-body .headline:hover {
+    color: var(--bg-primary);
 }
