@@ -191,7 +191,7 @@ header#top-header .navigation li {
 #features .objectives {
     position: relative;
     top: -100px;
-    padding: 5rem;
+    padding: 1.5rem;
     background-color: var(--bg-grey);
 }
 
@@ -205,8 +205,8 @@ header#top-header .navigation li {
 
 #features .objectives h1 {
     margin-top: 1rem;
-    font-size: 2rem;
-    font-weight: 600
+    font-size: 1.5rem;
+    font-weight: 600;
 }
 
 #about {
@@ -466,10 +466,11 @@ header#top-header .navigation li {
     color: var(--bg-primary);
 }
 
-#instructors .headline{
-    padding:.5rem;
+#instructors .headline {
+    padding: .5rem;
     text-transform: capitalize;
 }
+
 #instructors .instructor-card {
     border: 1px solid #ededf1;
     height: 530px;
@@ -482,60 +483,99 @@ header#top-header .navigation li {
 #instructors .card-body .instructor-name {
     font-size: 1.5rem;
 }
-#instructors .card-body .instructor-role{
-    font-weight:400;
-}
-#instructors .card-body a{
-    margin-left:.4rem;
-    margin-right:.4rem;
-    color:var(--bg-secondary);
-}
-#instructors .card-body a:hover i{
-    transition: ease-in-out all 1.5s;
-    color:var(--bg-primary);
-    transform: rotate(360deg);
-}
-#news .headline{
-    margin-bottom:1.5rem;
-}
-#news .news-card{
-    border:1px solid #ededf1;
-    height:480px;
-}
-#news .news-card:hover{
-box-shadow: 0px 5px 25px rgba(27, 39, 71, 0.15);
-}
-#news .news-body{
-    padding:1.1rem;
-}
-#news .news-body h1{
-    font-size:1.5rem;
-    font-weight:700;
-}
-#news .news-body button{
-    background:var(--bg-primary);
-    color:white;
-    padding:.2rem 1rem .2rem 1rem;
+
+#instructors .card-body .instructor-role {
+    font-weight: 400;
 }
 
-footer{
-    background-color:#182b45;
+#instructors .card-body a {
+    margin-left: .4rem;
+    margin-right: .4rem;
+    color: var(--bg-secondary);
+}
+
+#instructors .card-body a:hover i {
+    transition: ease-in-out all 1.5s;
+    color: var(--bg-primary);
+    transform: rotate(360deg);
+}
+
+#news .headline {
+    margin-bottom: 1.5rem;
+}
+
+#news .news-card {
+    border: 1px solid #ededf1;
+    height: 480px;
+}
+
+#news .news-card:hover {
+    box-shadow: 0px 5px 25px rgba(27, 39, 71, 0.15);
+}
+
+#news .news-body {
+    padding: 1.1rem;
+}
+
+#news .news-body h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+#news .news-body button {
+    background: var(--bg-primary);
+    color: white;
+    padding: .2rem 1rem .2rem 1rem;
+}
+
+footer {
+    background-color: #182b45;
     color: white;
 }
 
-@media(max-width:992px){
-    footer img{
-        margin-left:auto;
-        margin-right:auto;
+@media(max-width:992px) {
+    footer img {
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 
-footer .information{
-    margin-left:5rem;
-    padding:1rem;
+footer .information {
+    margin-left: 5rem;
+    padding: 1rem;
 }
-footer .information i{
-    margin-right:.5rem;
-    color:var(--bg-primary);
-    font-size:1.2rem;
+
+footer .information i {
+    margin-right: .5rem;
+    color: var(--bg-primary);
+    font-size: 1.2rem;
+}
+
+
+#teacher .carousel-item {
+    display: block;
+}
+
+#teacher .instructor-card img {
+    height: 350px;
+}
+
+#teacher .instructor-card .instructor-name {
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+
+#teacher .instructor-card .instructor-role {
+    font-weight: 600;
+}
+
+#teacher a {
+    margin-left: .5rem;
+    margin-right: .5rem;
+    color: black;
+    font-size: 1.1rem;
+}
+
+#teacher a:hover {
+    color: var(--bg-primary);
 }
