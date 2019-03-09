@@ -209,33 +209,6 @@ header#top-header .navigation li {
     font-weight: 600;
 }
 
-#about {
-    margin-bottom: 5rem;
-}
-
-#about .row {
-    padding-top: 5rem;
-}
-
-#about h1 {
-    margin-bottom: 1rem;
-    font-family: var(--font);
-    font-weight: 800;
-}
-
-#about p {
-    text-align: justify;
-    margin-bottom: 2rem;
-    font-family: var(--font);
-    color: var(--bg-secondary);
-    line-height: 1.9;
-}
-
-#about .btn-learn {
-    padding: .5rem 2rem .5rem 2rem;
-    font-weight: 500;
-    font-size: 1.2rem;
-}
 
 #courses header p {
     font-weight: 800;
@@ -466,38 +439,32 @@ header#top-header .navigation li {
     color: var(--bg-primary);
 }
 
-#instructors .headline {
-    padding: .5rem;
-    text-transform: capitalize;
+#about {
+    margin-bottom: 5rem;
 }
 
-#instructors .instructor-card {
-    border: 1px solid #ededf1;
-    height: 530px;
+#about .row {
+    padding-top: 5rem;
 }
 
-#instructors .instructor-card:hover {
-    box-shadow: 0px 5px 25px rgba(27, 39, 71, 0.15);
+#about h1 {
+    margin-bottom: 1rem;
+    font-family: var(--font);
+    font-weight: 800;
 }
 
-#instructors .card-body .instructor-name {
-    font-size: 1.5rem;
-}
-
-#instructors .card-body .instructor-role {
-    font-weight: 400;
-}
-
-#instructors .card-body a {
-    margin-left: .4rem;
-    margin-right: .4rem;
+#about p {
+    text-align: justify;
+    margin-bottom: 2rem;
+    font-family: var(--font);
     color: var(--bg-secondary);
+    line-height: 1.9;
 }
 
-#instructors .card-body a:hover i {
-    transition: ease-in-out all 1.5s;
-    color: var(--bg-primary);
-    transform: rotate(360deg);
+#about .btn-learn {
+    padding: .5rem 2rem .5rem 2rem;
+    font-weight: 500;
+    font-size: 1.2rem;
 }
 
 #news .headline {
@@ -528,6 +495,34 @@ header#top-header .navigation li {
     padding: .2rem 1rem .2rem 1rem;
 }
 
+#instructors .headline {
+    margin-bottom: 2rem;
+}
+
+#instructors .instructor-card img {
+    height: 300px;
+}
+
+#instructors .instructor-card .instructor-name {
+    font-size: 1.3rem;
+    font-weight: 800;
+}
+
+#instructors .instructor-card .instructor-role {
+    font-weight: 600;
+    font-size: .9rem;
+}
+
+#instructors a {
+    margin-right: 1rem;
+    color: black;
+    font-size: 1rem;
+}
+
+#instructors a:hover {
+    color: var(--bg-primary);
+}
+
 footer {
     background-color: #182b45;
     color: white;
@@ -549,33 +544,4 @@ footer .information i {
     margin-right: .5rem;
     color: var(--bg-primary);
     font-size: 1.2rem;
-}
-
-
-#teacher .carousel-item {
-    display: block;
-}
-
-#teacher .instructor-card img {
-    height: 350px;
-}
-
-#teacher .instructor-card .instructor-name {
-    font-size: 1.5rem;
-    font-weight: 800;
-}
-
-#teacher .instructor-card .instructor-role {
-    font-weight: 600;
-}
-
-#teacher a {
-    margin-left: .5rem;
-    margin-right: .5rem;
-    color: black;
-    font-size: 1.1rem;
-}
-
-#teacher a:hover {
-    color: var(--bg-primary);
 }
