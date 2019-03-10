@@ -21,44 +21,40 @@
 
 <body data-spy="scroll" data-target=".navbar">
 
-    <header id="top-header">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 text-center text-lg-left">
-                    <a href="tel:+44 300 303 0266">CALL +44 300 303 0266</a>
+    <header class="fixed-top">
 
-                    <ul class="list-inline socials">
-                        <li class="list-inline-item">
-                            <a href="http://"><span class="fab fa-facebook-f"></span></a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a href="http://"><span class="fab fa-twitter"></span></a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a href="http://"><span class="fab fa-linkedin-in"></span></a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a href="http://"><span class="fab fa-mailchimp"></span></a>
-                        </li>
-                    </ul>
+        <div id="get-in-touch" class="">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 text-center text-lg-left">
+                        <a href="tel:+44 300 303 0266">CALL +44 300 303 0266</a>
 
-                </div>
-                <div class="col-lg-6 text-center text-lg-right">
-                    <ul class="list-inline navigation">
-                        <li class="list-inline-item"><a href="">Notice</a></li>
-                        <li class="list-inline-item"><a href="">Research</a></li>
-                        <li class="list-inline-item"><a href="">Scholarship</a></li>
-                        <li class="list-inline-item"><a href="">Login</a></li>
-                        <li class="list-inline-item"><a href="">Register</a></li>
-                    </ul>
+                        <ul class="list-inline socials">
+                            <li class="list-inline-item">
+                                <a href="http://"><span class="fab fa-facebook-f"></span></a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="http://"><span class="fab fa-twitter"></span></a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="http://"><span class="fab fa-linkedin-in"></span></a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="http://"><span class="fab fa-mailchimp"></span></a>
+                            </li>
+                        </ul>
+
+                    </div>
+                    <div class="col-lg-6 text-center text-lg-right">
+                        <ul class="list-inline navigation">
+                            <li class="list-inline-item"><a href="">Login</a></li>
+                            <li class="list-inline-item"><a href="">Register</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
-    </header>
-
-
-    <section id="carousel">
-        <header>
+        <div id="navigation-menu">
             <div class="container">
                 <nav class="navbar navbar-expand-xl p-0 navbar-light">
                     <a class="navbar-brand" href="#"><img src="images/logo.png" alt=""></a>
@@ -79,7 +75,13 @@
                     </div>
                 </nav>
             </div>
-        </header>
+        </div>
+
+
+    </header>
+
+
+    <section id="carousel">
 
         <div class="container">
             <div id="carouselId" class="carousel slide" data-ride="carousel">
@@ -119,6 +121,18 @@
                 </div>
 
             </div>
+
+            <div id="search" class="row justify-content-center">
+                <div class="col-lg-8 py-5">
+                    <div class="input-group">
+                        <span class="input-group-btn">
+                            <button class="btn btn-secondary" type="button"><i class="fas fa-search"></i></button>
+                        </span>
+                        <input type="text" class="form-control" name="name" id="name" placeholder="search for a course ....">
+                    </div>
+                </div>
+            </div>
+
         </div>
     </section>
 
