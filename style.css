@@ -41,6 +41,15 @@
 header#top-header {
     padding-top: .5rem;
     padding-bottom: .5rem;
+    transform:scaleY(1);
+    transform-origin: bottom;
+    transition: all ease 1s;
+}
+
+header#top-header.hide {
+    transform:scaleY(0);
+    transform-origin: bottom;
+    transition: all 1s;
 }
 
 header#top-header a {
@@ -94,16 +103,30 @@ header#top-header .navigation li {
     background: linear-gradient(to right, transparent 50%, var(--bg-primary) 50%);
 }
 
+#carousel header.nav-bg {
+    position: fixed !important;
+    background: linear-gradient(to right, #1a1a37 50%, var(--bg-primary) 50%);
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 1030;
+}
+
 @media(max-width:992px) {
     #carousel header {
-        background: linear-gradient(to right, #1a1a37 70%, var(--bg-primary) 50%);
+        background: linear-gradient(to right, #1a1a37 70%, var(--bg-primary) 50%) !important;
     }
 }
 
 #carousel #navbarSupportedContent ul {
     background: var(--bg-primary);
-    padding: 1.1rem;
+    padding-left: 2rem;
 }
+
+#carousel #navbarSupportedContent li {
+    position: relative;
+}
+
 
 
 #carousel #navbarSupportedContent a {
@@ -112,10 +135,36 @@ header#top-header .navigation li {
     color: white;
     margin-left: .75rem;
     margin-right: .75rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+#carousel #navbarSupportedContent a::before {
+    content: "";
+    transform: scaleY(0);
+    height: 5px;
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    right: 0;
+    background: white;
+    transition: all ease-in-out .2s;
+}
+
+#carousel #navbarSupportedContent a:hover::before {
+    transform: scaleY(1);
+    transition: all ease-in-out .2s;
+}
+
+
+#carousel #navbarSupportedContent a.active::before {
+    transform: scaleY(1);
+    transition: all ease-in-out .2s;
 }
 
 #carousel #carouselId {
-    margin-top: 100px;
+    padding-top: 100px;
 }
 
 #carousel .carousel-inner {
@@ -184,26 +233,26 @@ header#top-header .navigation li {
 }
 
 
-#features {
+#why-us {
     background-color: var(--bg-grey);
 }
 
-#features .objectives {
+#why-us .objectives {
     position: relative;
     top: -100px;
     padding: 1.5rem;
     background-color: var(--bg-grey);
 }
 
-#features .objectives .col-md-6 {
+#why-us .objectives .col-md-6 {
     padding: 1.5rem;
 }
 
-#features .objectives i {
+#why-us .objectives i {
     color: var(--bg-primary);
 }
 
-#features .objectives h1 {
+#why-us .objectives h1 {
     margin-top: 1rem;
     font-size: 1.5rem;
     font-weight: 600;
@@ -270,25 +319,25 @@ header#top-header .navigation li {
     background: var(--bg-primary);
 }
 
-#training .box {
+#workshop .box {
     padding-top: 5rem;
     padding-bottom: 5rem;
 }
 
-#training .small-text {
+#workshop .small-text {
     color: white;
     font-size: 1.1rem;
     font-weight: 500;
     margin-bottom: 0;
 }
 
-#training .big-text {
+#workshop .big-text {
     color: white;
     font-size: 3rem;
     font-weight: 800;
 }
 
-#training .btn-hollow {
+#workshop .btn-hollow {
     background: var(--bg-primary);
 }
 

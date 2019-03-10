@@ -1,4 +1,22 @@
 $(document).ready(function () {
+
+    // Navigation Effect
+    $(window).scroll(function(){
+        if($(window).scrollTop() > 10){
+            $('.top-header').addClass('hide');
+            $('#carousel header').addClass('nav-bg');
+
+
+        }
+        else{
+            $('.top-header').removeClass('hide');
+            $('#carousel header').removeClass('nav-bg');
+        }
+    });
+
+
+
+    // instructor-Carousel using slick instruction 
     $('.instructors-carousel').slick({
         dots: true,
         speed: 500,
