@@ -38,45 +38,137 @@
     transition: ease-in .2s;
 }
 
-header#top-header {
-    padding-top: .5rem;
-    padding-bottom: .5rem;
+
+header #get-in-touch {
+    transform: scaleY(1);
+    transform-origin: top;
+    background: white;
+    transition: .4s all;
 }
 
-header#top-header a {
+header #get-in-touch.hide {
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: all .4s;
+}
+
+header #get-in-touch a {
     color: var(--font-color);
     font-weight: 800;
     font-size: .75rem;
 }
 
-header#top-header a:hover {
+header #get-in-touch a:hover {
     color: var(--bg-primary);
     text-decoration: none;
 }
 
-header#top-header .socials {
+header #get-in-touch .socials {
     display: inline-block;
     margin-left: .5rem;
 
 }
 
-header#top-header .socials a {
+header #get-in-touch .socials a {
     margin-left: .3rem;
     margin-right: .3rem;
 
 }
 
-header#top-header .navigation li {
+header #get-in-touch .navigation li {
     text-transform: uppercase;
     margin-left: .5rem;
     margin-right: .5rem;
 }
 
+
+header #navigation-menu {
+    position: relative;
+    background: linear-gradient(to right, transparent 50%, var(--bg-primary) 50%);
+    /* transition:all .4s; */
+}
+
+header #navigation-menu.nav-bg {
+    background: linear-gradient(to right, #1a1a37 50%, var(--bg-primary) 50%);
+    margin-top: -46px;
+    transition: ease .4s;
+}
+
+
+
+@media(max-width:992px) {
+    header #navigation-menu {
+        background: linear-gradient(to right, #1a1a37 70%, var(--bg-primary) 50%) !important;
+    }
+
+    header #navigation-menu.nav-bg {
+        background: linear-gradient(to right, #1a1a37 50%, var(--bg-primary) 50%);
+        margin-top: -80px;
+        transition: ease .4s;
+    }
+}
+
+header #navigation-menu #navbarSupportedContent ul {
+    background: var(--bg-primary);
+    padding-left: 2rem;
+}
+
+header #navigation-menu #navbarSupportedContent li {
+    position: relative;
+}
+
+
+
+header #navigation-menu #navbarSupportedContent a {
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: white;
+    margin-left: .75rem;
+    margin-right: .75rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+header #navigation-menu #navbarSupportedContent a::before {
+    content: "";
+    transform: scaleY(0);
+    height: 5px;
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    right: 0;
+    background: white;
+    transition: all ease-in-out .2s;
+}
+
+header #navigation-menu #navbarSupportedContent a:hover::before {
+    transform: scaleY(1);
+    transition: all ease-in-out .2s;
+}
+
+
+header #navigation-menu #navbarSupportedContent a.active::before {
+    transform: scaleY(1);
+    transition: all ease-in-out .2s;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 #carousel {
     position: relative;
     background: url('images/banner-1.jpg') no-repeat center center;
     background-size: cover;
-    height: 700px;
+    height: 800px;
 }
 
 #carousel:before {
@@ -89,33 +181,8 @@ header#top-header .navigation li {
 
 }
 
-#carousel header {
-    position: relative;
-    background: linear-gradient(to right, transparent 50%, var(--bg-primary) 50%);
-}
-
-@media(max-width:992px) {
-    #carousel header {
-        background: linear-gradient(to right, #1a1a37 70%, var(--bg-primary) 50%);
-    }
-}
-
-#carousel #navbarSupportedContent ul {
-    background: var(--bg-primary);
-    padding: 1.1rem;
-}
-
-
-#carousel #navbarSupportedContent a {
-    font-size: 1.1rem;
-    font-weight: 800;
-    color: white;
-    margin-left: .75rem;
-    margin-right: .75rem;
-}
-
 #carousel #carouselId {
-    margin-top: 100px;
+    padding-top: 220px;
 }
 
 #carousel .carousel-inner {
@@ -183,59 +250,56 @@ header#top-header .navigation li {
     color: var(--bg-primary);
 }
 
-
-#features {
-    background-color: var(--bg-grey);
-}
-
-#features .objectives {
+#carousel #search {
     position: relative;
-    top: -100px;
-    padding: 5rem;
+}
+
+#carousel #search .input-group {
+    height: 50px;
+}
+
+#carousel #search input {
+    height: 100%;
+}
+
+#carousel #search .input-group-btn {
+    background: var(--bg-primary);
+    border-radius: 2px;
+}
+
+#carousel #search button {
+    height: 100%;
+    padding-left: 1.1rem;
+    padding-right: 1.1rem;
+    background: var(--bg-primary);
+    border-color: var(--bg-primary);
+}
+
+
+
+#why-us {
     background-color: var(--bg-grey);
 }
 
-#features .objectives .col-md-6 {
+#why-us .objectives {
+    padding: 1.5rem;
+    background-color: var(--bg-grey);
+}
+
+#why-us .objectives .col-md-6 {
     padding: 1.5rem;
 }
 
-#features .objectives i {
+#why-us .objectives i {
     color: var(--bg-primary);
 }
 
-#features .objectives h1 {
+#why-us .objectives h1 {
     margin-top: 1rem;
-    font-size: 2rem;
-    font-weight: 600
+    font-size: 1.5rem;
+    font-weight: 600;
 }
 
-#about {
-    margin-bottom: 5rem;
-}
-
-#about .row {
-    padding-top: 5rem;
-}
-
-#about h1 {
-    margin-bottom: 1rem;
-    font-family: var(--font);
-    font-weight: 800;
-}
-
-#about p {
-    text-align: justify;
-    margin-bottom: 2rem;
-    font-family: var(--font);
-    color: var(--bg-secondary);
-    line-height: 1.9;
-}
-
-#about .btn-learn {
-    padding: .5rem 2rem .5rem 2rem;
-    font-weight: 500;
-    font-size: 1.2rem;
-}
 
 #courses header p {
     font-weight: 800;
@@ -297,25 +361,25 @@ header#top-header .navigation li {
     background: var(--bg-primary);
 }
 
-#training .box {
+#workshop .box {
     padding-top: 5rem;
     padding-bottom: 5rem;
 }
 
-#training .small-text {
+#workshop .small-text {
     color: white;
     font-size: 1.1rem;
     font-weight: 500;
     margin-bottom: 0;
 }
 
-#training .big-text {
+#workshop .big-text {
     color: white;
     font-size: 3rem;
     font-weight: 800;
 }
 
-#training .btn-hollow {
+#workshop .btn-hollow {
     background: var(--bg-primary);
 }
 
@@ -323,18 +387,6 @@ header#top-header .navigation li {
     background: url('images/success-story.jpg') no-repeat;
     background-position: center;
     background-size: cover;
-}
-
-@media(max-width:768px) {
-    #stories .btn-play {
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    #stories .story-card {
-        margin-left: auto;
-        margin-right: auto;
-    }
 }
 
 #stories .btn-play {
@@ -372,11 +424,6 @@ header#top-header .navigation li {
     transition: easeease-in-out .3s;
 }
 
-#events {
-    background: var(--bg-grey);
-    padding-top: 50px;
-    padding-bottom: 50px;
-}
 
 #stories .story-card {
     background: white;
@@ -384,6 +431,28 @@ header#top-header .navigation li {
     color: var(--font-color);
 }
 
+@media(max-width:768px) {
+    #stories .btn-play {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #stories .story-card {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+
+#stories .story-card i {
+    color: var(--bg-primary);
+}
+
+#events {
+    background: var(--bg-grey);
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
 
 #events header p {
     font-weight: 800;
@@ -466,76 +535,140 @@ header#top-header .navigation li {
     color: var(--bg-primary);
 }
 
-#instructors .headline{
-    padding:.5rem;
-    text-transform: capitalize;
-}
-#instructors .instructor-card {
-    border: 1px solid #ededf1;
-    height: 530px;
+#about {
+    margin-bottom: 5rem;
 }
 
-#instructors .instructor-card:hover {
+#about .row {
+    padding-top: 5rem;
+}
+
+#about h1 {
+    margin-bottom: 1rem;
+    font-family: var(--font);
+    font-weight: 800;
+}
+
+#about p {
+    text-align: justify;
+    margin-bottom: 2rem;
+    font-family: var(--font);
+    color: var(--bg-secondary);
+    line-height: 1.9;
+}
+
+#about .btn-learn {
+    padding: .5rem 2rem .5rem 2rem;
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+#news .headline {
+    margin-bottom: 1.5rem;
+}
+
+#news .news-card {
+    border: 1px solid #ededf1;
+    height: 480px;
+}
+
+#news .news-card:hover {
     box-shadow: 0px 5px 25px rgba(27, 39, 71, 0.15);
 }
 
-#instructors .card-body .instructor-name {
-    font-size: 1.5rem;
-}
-#instructors .card-body .instructor-role{
-    font-weight:400;
-}
-#instructors .card-body a{
-    margin-left:.4rem;
-    margin-right:.4rem;
-    color:var(--bg-secondary);
-}
-#instructors .card-body a:hover i{
-    transition: ease-in-out all 1.5s;
-    color:var(--bg-primary);
-    transform: rotate(360deg);
-}
-#news .headline{
-    margin-bottom:1.5rem;
-}
-#news .news-card{
-    border:1px solid #ededf1;
-    height:480px;
-}
-#news .news-card:hover{
-box-shadow: 0px 5px 25px rgba(27, 39, 71, 0.15);
-}
-#news .news-body{
-    padding:1.1rem;
-}
-#news .news-body h1{
-    font-size:1.5rem;
-    font-weight:700;
-}
-#news .news-body button{
-    background:var(--bg-primary);
-    color:white;
-    padding:.2rem 1rem .2rem 1rem;
+#news .news-body {
+    padding: 1.1rem;
 }
 
-footer{
-    background-color:#182b45;
+#news .news-body h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+#news .news-body button {
+    background: var(--bg-primary);
+    color: white;
+    padding: .2rem 1rem .2rem 1rem;
+}
+
+#instructors .headline {
+    margin-bottom: 2rem;
+}
+
+#instructors .instructor-card img {
+    height: 300px;
+}
+
+#instructors .instructor-card .instructor-name {
+    font-size: 1.3rem;
+    font-weight: 800;
+}
+
+#instructors .instructor-card .instructor-role {
+    font-weight: 600;
+    font-size: .9rem;
+}
+
+#instructors a {
+    margin-right: 1rem;
+    color: black;
+    font-size: 1rem;
+}
+
+#instructors a:hover {
+    color: var(--bg-primary);
+}
+
+footer {
+    background-color: #182b45;
     color: white;
 }
 
-@media(max-width:992px){
-    footer img{
-        margin-left:auto;
-        margin-right:auto;
+@media(max-width:992px) {
+    footer img {
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 
-footer .information{
-    margin-left:5rem;
-    padding:1rem;
+footer .information {
+    margin-left: 5rem;
+    padding: 1rem;
 }
-footer .information i{
-    margin-right:.5rem;
+
+footer .information i {
+    margin-right: .5rem;
+    color: var(--bg-primary);
+    font-size: 1.2rem;
+}
+
+footer .up-button{
+    margin:auto;
+}
+footer .up-button a{
+    position:relative;
+}
+
+footer .up-button a::before{
+    content:"";
+    height:2px;
+    background:transparent;
+    width:100%;
+    position:absolute;
+    bottom:-5px;
+    transition:all .7s;
+}
+
+footer .up-button i{
+    color:white;
+    transition:transform .5s;
+}
+
+footer .up-button a:hover i{
     color:var(--bg-primary);
-    font-size:1.2rem;
+    transform:translateY(-10px);
+}
+    
+footer .up-button a:hover::before{
+    background:var(--bg-primary);
 }
