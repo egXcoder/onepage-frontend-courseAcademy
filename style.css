@@ -40,14 +40,14 @@
 
 
 header #get-in-touch {
-    transform:scaleY(1);
+    transform: scaleY(1);
     transform-origin: top;
-    background:white;
-    transition:.4s all;
+    background: white;
+    transition: .4s all;
 }
 
 header #get-in-touch.hide {
-    transform:scaleY(0);
+    transform: scaleY(0);
     transform-origin: top;
     transition: all .4s;
 }
@@ -89,9 +89,9 @@ header #navigation-menu {
 }
 
 header #navigation-menu.nav-bg {
-    background:linear-gradient(to right, #1a1a37 50%, var(--bg-primary) 50%);
-    margin-top:-46px;
-    transition:ease .4s;
+    background: linear-gradient(to right, #1a1a37 50%, var(--bg-primary) 50%);
+    margin-top: -46px;
+    transition: ease .4s;
 }
 
 
@@ -100,10 +100,11 @@ header #navigation-menu.nav-bg {
     header #navigation-menu {
         background: linear-gradient(to right, #1a1a37 70%, var(--bg-primary) 50%) !important;
     }
+
     header #navigation-menu.nav-bg {
-        background:linear-gradient(to right, #1a1a37 50%, var(--bg-primary) 50%);
-        margin-top:-80px;
-        transition:ease .4s;
+        background: linear-gradient(to right, #1a1a37 50%, var(--bg-primary) 50%);
+        margin-top: -80px;
+        transition: ease .4s;
     }
 }
 
@@ -248,26 +249,30 @@ header #navigation-menu #navbarSupportedContent a.active::before {
 #carousel .arrows a:hover {
     color: var(--bg-primary);
 }
-#carousel #search{
-    position:relative;
+
+#carousel #search {
+    position: relative;
 }
 
-#carousel #search .input-group{
-    height:50px;
+#carousel #search .input-group {
+    height: 50px;
 }
-#carousel #search input{
-    height:100%;
+
+#carousel #search input {
+    height: 100%;
 }
-#carousel #search .input-group-btn{
-    background:var(--bg-primary);
-    border-radius:2px;
+
+#carousel #search .input-group-btn {
+    background: var(--bg-primary);
+    border-radius: 2px;
 }
-#carousel #search button{
-    height:100%;
-    padding-left:1.1rem;
-    padding-right:1.1rem;
-    background:var(--bg-primary);
-    border-color:var(--bg-primary);
+
+#carousel #search button {
+    height: 100%;
+    padding-left: 1.1rem;
+    padding-right: 1.1rem;
+    background: var(--bg-primary);
+    border-color: var(--bg-primary);
 }
 
 
@@ -384,18 +389,6 @@ header #navigation-menu #navbarSupportedContent a.active::before {
     background-size: cover;
 }
 
-@media(max-width:768px) {
-    #stories .btn-play {
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    #stories .story-card {
-        margin-left: auto;
-        margin-right: auto;
-    }
-}
-
 #stories .btn-play {
     position: relative;
     z-index: 1;
@@ -431,11 +424,6 @@ header #navigation-menu #navbarSupportedContent a.active::before {
     transition: easeease-in-out .3s;
 }
 
-#events {
-    background: var(--bg-grey);
-    padding-top: 50px;
-    padding-bottom: 50px;
-}
 
 #stories .story-card {
     background: white;
@@ -443,6 +431,28 @@ header #navigation-menu #navbarSupportedContent a.active::before {
     color: var(--font-color);
 }
 
+@media(max-width:768px) {
+    #stories .btn-play {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #stories .story-card {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+
+#stories .story-card i {
+    color: var(--bg-primary);
+}
+
+#events {
+    background: var(--bg-grey);
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
 
 #events header p {
     font-weight: 800;

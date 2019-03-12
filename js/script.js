@@ -1,18 +1,35 @@
 $(document).ready(function () {
 
     // Navigation Effect
-    $(window).scroll(function(){
-        if($(window).scrollTop() > 10){
+    $(window).scroll(function () {
+        if ($(window).scrollTop() > 10) {
             $('#get-in-touch').addClass('hide');
             $('#navigation-menu').addClass('nav-bg');
 
 
-        }
-        else{
+        } else {
             $('#get-in-touch').removeClass('hide');
             $('#navigation-menu').removeClass('nav-bg');
         }
     });
+
+    // Succes Story Carousel 
+    var story_cards = $(".story-card");
+    var current_card = 0;
+    function  story_carousel() {
+        $(story_cards[current_card]).fadeOut(500, function () {
+            if(current_card==story_cards.length-1){
+                current_card=0;
+            }
+            else{
+                current_card++;
+            }
+
+            $(story_cards[current_card]).fadeIn(500);
+        });
+    }
+    setInterval(story_carousel, 5000);
+
 
 
 
@@ -20,8 +37,8 @@ $(document).ready(function () {
     $('.instructors-carousel').slick({
         dots: true,
         speed: 500,
-        arrows:false,
-        autoplay:false,
+        arrows: false,
+        autoplay: false,
         slidesToShow: 3,
         slidesToScroll: 1,
         responsive: [{
