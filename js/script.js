@@ -30,9 +30,6 @@ $(document).ready(function () {
     }
     setInterval(story_carousel, 5000);
 
-
-
-
     // instructor-Carousel using slick instruction 
     $('.instructors-carousel').slick({
         dots: true,
@@ -60,4 +57,11 @@ $(document).ready(function () {
 
         ]
     });
+
+   $(".up-button").find("a").click(function(){
+       $("html").animate({
+           scrollTop:0
+        },500);
+   });
+    
 });

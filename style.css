@@ -641,3 +641,33 @@ footer .information i {
     color: var(--bg-primary);
     font-size: 1.2rem;
 }
+
+footer .up-button{
+    margin:auto;
+}
+footer .up-button a{
+    position:relative;
+}
+
+footer .up-button a::before{
+    content:"";
+    height:2px;
+    background:transparent;
+    width:100%;
+    position:absolute;
+    bottom:-5px;
+    transition:all .7s;
+}
+
+footer .up-button i{
+    color:white;
+    transition:transform .5s;
+}
+
+footer .up-button a:hover i{
+    color:var(--bg-primary);
+    transform:translateY(-10px);
+}
+footer .up-button a:hover::before{
+    background:var(--bg-primary);
+}
