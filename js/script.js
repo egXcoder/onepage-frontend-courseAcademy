@@ -12,6 +12,15 @@ $(document).ready(function () {
             $('#navigation-menu').removeClass('nav-bg');
         }
     });
+    
+    // smoother navigation
+    $("#navbarSupportedContent a").click(function(e){
+        e.preventDefault();
+        var hash = this.hash;
+        $("html,body").animate({
+            scrollTop: $(hash).offset().top
+        },300);
+    });
 
     // Succes Story Carousel 
     var story_cards = $(".story-card");
