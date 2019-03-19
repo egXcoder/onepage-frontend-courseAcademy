@@ -1,0 +1,68 @@
+admins 
+    admin_id INT   PRIMARY KEY   AUTO INCREMENT
+    admin_name VARCHAR(100)
+    email VARCHAR(100) UNIQUE
+    admin_password VARCHAR(100)
+    role VARCHAR(100)
+
+users  .. can register..login ... enrol to course ... attend events
+    user_id INT   PRIMARY KEY   AUTO INCREMENT
+    user_name VARCHAR(100)
+    email VARCHAR(100) UNIQUE
+    user_password VARCHAR(100)
+
+courses
+    course_id INT   PRIMARY KEY   AUTO INCREMENT
+    title VARCHAR(100)
+    image_url VARCHAR(100)
+    description TEXT
+    instructor --- foreign key points to instructors.id RESTRICT,RESTRICT (here one course can have only one instructor )
+    start_date TIMESTAMP
+    rating TINYINT
+    category INT --- foreign key points to courses_category.id RESTRICT,RESTRICT
+
+users_enrolled_in_courses (many to many relationship)
+    id INT   PRIMARY KEY   AUTO INCREMENT
+    user_id INT --- foreign key points to users.user_id Cascade,cascade
+    course_id --- foreign key points to courses.course_id Cascade,cascade
+    rating TINYINT
+    review TEXT 
+
+courses_category 
+    category_id   INT   PRIMARY KEY   AUTO INCREMENT
+    category_name VARCHAR(100)
+
+latest_news
+    news_id INT   PRIMARY KEY   AUTO INCREMENT
+    title VARCHAR(100)
+    image_url VARCHAR(100)
+    description TEXT
+
+comments_in_news
+    id
+    user_id --- foreign key points to users.user_id Cascade,cascade
+    new_id --- foreign key points to latest_news.news_id Cascade,cascade
+    comment TEXT
+
+events
+    event_id INT   PRIMARY KEY   AUTO INCREMENT
+    title VARCHAR(100)
+    image_url VARCHAR(100)
+    start_date TIMESTAMP    
+    location  VARCHAR(100)
+
+users_attend_events
+    id INT   PRIMARY KEY   AUTO INCREMENT
+    user_id INT --- foreign key points to users.user_id Cascade,cascade
+    event_id --- foreign key points to events.event_id Cascade,cascade
+    comment TEXT
+
+instructors
+    instructor_id INT   PRIMARY KEY   AUTO INCREMENT
+    name VARCHAR(200)
+    profession_title VARCHAR(200)
+    image_url VARCHAR(100)
+    facebook_link VARCHAR(100)
+    twitter_link VARCHAR(100)
+    email_link VARCHAR(100)
+    linkedin_link VARCHAR(100)    
